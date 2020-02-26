@@ -62,18 +62,20 @@
                 <p><b>Resultado de ruleta:</b> {{$resultado_ruleta}}</p>
             </div>
         </div>
+        @if(isset($jugadores_activos) && count($jugadores_activos) > 0)
         @if($en_curso)
         <a href="{{url('/')}}" class="btn btn-success" >Jugar otra ronda</a>
         <a href="{{url('/terminar_juego')}}" class="btn btn-danger" >Terminar juego</a>
         <script>
             setTimeout(function(){ window.location=self.location; }, 30000);
         </script>
-        @elseif(isset($jugadores_activos) && count($jugadores_activos) > 0)
+        @else
         <form method="post" action="{{url('/crear_juego')}}">
             @csrf
             <button type="submit" class="btn btn-success">Iniciar simulación</button>
             <input hidden="iniciar" value="1">
         </form>
+        @endif
         @endif
         <!-- /.card -->
 
