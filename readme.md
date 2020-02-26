@@ -1,3 +1,16 @@
+## Despliegue del aplicativo
+
+Para poder descargar el aplicativo se deben seguir los pasos descritos a continuación:
+- Clonar el proyecto
+- Aplicar en la consola el comando: composer install Para que se cree la carpeta  VENDOR.
+- Luego deben crear su archhivo .env basandose en el archivo .env.example que se encuentra en la raiz de este proyecto
+- Ejecutar en POSTGRESQL el script SQL 20200225_script.sql que se encuentra en scripts/
+- En el archivo .env configurar los datos correspondientes a la conexión de base de datos: DB_CONNECTION,DB_HOST,DB_PORT,DB_DATABASE,DB_USERNAME,DB_PASSWORD
+El DB_CONNECTION por tratarse de una base de datos Postgres debe ser pgsql
+- Instalar LaravelCollective de la siguiente forma: composer require "laravelcollective/html":"^5.4.0"
+- Finalmente debe activar el servidor, ejecutando el comando php artisan serve
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
