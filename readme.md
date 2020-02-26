@@ -1,3 +1,17 @@
+## Despliegue del aplicativo
+
+Para poder desplegar el aplicativo se deben seguir los pasos descritos a continuación:
+- Clonar el proyecto
+- REQUISITO: tener instalado composer o instalarlo (Guia para ubuntu https://parzibyte.me/blog/2019/07/01/instalar-composer-linux-ubuntu/)
+- Dentro de la carpeta del proyecto aplicar en la consola el comando: composer install (Para que se cree la carpeta  VENDOR).
+- Ejecutar en POSTGRESQL el script SQL 20200225_script.sql que se encuentra en la carpeta scripts/ (Esto crea la base de datos y las tablas)
+- Crear el archivo.env en la raiz del proyecto basandose en el archivo .env.example que se encuentra en la raiz de este proyecto.
+- En el archivo .env configurar los datos correspondientes a la conexión de base de datos: DB_CONNECTION,DB_HOST,DB_PORT,DB_DATABASE,DB_USERNAME,DB_PASSWORD
+- El DB_CONNECTION por tratarse de una base de datos Postgres debe ser igual a pgsql
+- Ejecutar por consola el siguiente comando: php artisan key:generate
+- Finalmente debe activar el servidor, ejecutando el comando php artisan serve
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
