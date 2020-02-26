@@ -68,7 +68,7 @@
         <script>
             setTimeout(function(){ window.location=self.location; }, 30000);
         </script>
-        @elseif(isset($jugadores_activos))
+        @elseif(isset($jugadores_activos) && count($jugadores_activos) > 0)
         <form method="post" action="{{url('/crear_juego')}}">
             @csrf
             <button type="submit" class="btn btn-success">Iniciar simulación</button>
