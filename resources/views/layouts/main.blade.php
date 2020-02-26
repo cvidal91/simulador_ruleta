@@ -14,6 +14,7 @@
     <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/shop-item.css')}}" rel="stylesheet">
     <script src="{{asset('js/jquery/jquery.min.js')}}"></script>  
+	<script src="{{asset('js/bootstrap/bootstrap.bundle.min.js')}}"></script> 
     <link rel="stylesheet" type="text/css" href="{{asset('DataTables/datatables.min.css')}}"/>
     <script src="{{asset('DataTables/datatables.min.js')}}"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('css/swal/sweetalert2.min.css')}}"/>
